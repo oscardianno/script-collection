@@ -1,0 +1,2 @@
+cscript PhoenixDaemon.vbs
+pause
