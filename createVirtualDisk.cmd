@@ -1,0 +1,1 @@
+imdisk -a -s 2G -m X: -p "/fs:ntfs /q /y"
