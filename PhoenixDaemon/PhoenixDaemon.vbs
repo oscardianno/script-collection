@@ -24,7 +24,7 @@ oc_exe_path = quot & oc_exe_directory & "\" & oc_exe_filename & quot
 While (True)
     WScript.Echo exe_filename & " starting at " & Now
     WSh.Run oc_exe_path, 1, False
-    WSh.Run exe_path, 2, True
+    WSh.Run exe_path, 7, True
     WScript.Echo exe_filename & " closed at " & Now
     WScript.Sleep(5000)
 Wend
