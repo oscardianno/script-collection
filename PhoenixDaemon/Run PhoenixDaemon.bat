@@ -1,2 +1,1 @@
-cscript PhoenixDaemon.vbs
-pause
+start /min cscript PhoenixDaemon.vbs ^& exit
