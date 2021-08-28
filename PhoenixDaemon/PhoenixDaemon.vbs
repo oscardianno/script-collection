@@ -30,5 +30,5 @@ While (True)
 Wend
 
 'Exit with success return (0)
-' Set WShell = Nothing
+' Set WSh = Nothing
 ' WScript.Quit(0)
