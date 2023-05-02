@@ -1,0 +1,5 @@
+ERROR: [youtube] 5Q3VU_JtLbU: Video unavailable. This video is not available
+ERROR: [youtube] Q0_rjvo-C5o: This video has been removed for violating YouTube's Community Guidelines
+ERROR: [youtube] SYTAvwZyIA0: Private video. Sign in if you've been granted access to this video
+ERROR: [youtube] 183mZ-wj7eA: This video is only available to Music Premium members
+WARNING: [youtube] Invalid start time (455.0 < 0) for chapter "Round about"
