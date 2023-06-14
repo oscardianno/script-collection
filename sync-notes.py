@@ -2,7 +2,6 @@ import os
 import sys
 import psutil
 import shutil
-import subprocess
 
 USER_PROFILE_PATH = os.environ["USERPROFILE"]
 SOURCE_PATH = USER_PROFILE_PATH + "\\Documents\\Simple Sticky Notes\\"
@@ -25,7 +24,7 @@ def save():
         if not os.path.exists(BACKUP_PATH):
             os.makedirs(BACKUP_PATH)
 
-        # Copy "Notes.db" file from "Documents\Simple Sticky Notes" directory to "Documents\Synced Notes" directory
+        # Copy "Notes.db" file from SOURCE_PATH directory to BACKUP_PATH directory
         shutil.copy2(SOURCE_PATH + FILE_NAME, BACKUP_PATH + FILE_NAME)
         print("Save successful!")
     except IOError as e:
@@ -37,9 +36,9 @@ def load():
     try:
         # Close the Simple Sticky Notes application
         os.system("taskkill /f /im " + APP_EXE_NAME)
-        # Backup: Copy and rename the "Notes.db" file in "Documents\Simple Sticky Notes" directory to "Notes.db.bak"
+        # Backup: Copy and rename the "Notes.db" file in SOURCE_PATH directory to "Notes.db.bak"
         shutil.copy2(SOURCE_PATH + FILE_NAME, SOURCE_PATH + FILE_NAME + ".bak")
-        # Copy "Notes.db" file from "Documents\Synced Notes" directory to "Documents\Simple Sticky Notes" directory
+        # Copy "Notes.db" file from BACKUP_PATH directory to SOURCE_PATH directory
         shutil.copy2(BACKUP_PATH + FILE_NAME, SOURCE_PATH + FILE_NAME)
         # Open the Simple Sticky Notes application again
         os.startfile(APP_PATH + APP_EXE_NAME)
