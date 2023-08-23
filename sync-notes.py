@@ -47,14 +47,30 @@ def load():
         print("Load failed: " + e)
 
 
-# Receive parameter from command line; "save" or "load" and call the appropriate function
+def restore_backup():
+    print("Restoring backup...")
+    try:
+        # Close the Simple Sticky Notes application
+        os.system("taskkill /f /im " + APP_EXE_NAME)
+        # Copy and rename the "Notes.db.bak" file in SOURCE_PATH directory to "Notes.db"
+        shutil.copy2(SOURCE_PATH + FILE_NAME + ".bak", SOURCE_PATH + FILE_NAME)
+        # Open the Simple Sticky Notes application again
+        os.startfile(APP_PATH + APP_EXE_NAME)
+        print("Backup restore successful!")
+    except IOError as e:
+        print("Backup restore failed: " + e)
+
+
+# Receive parameter from command line; "save", "load" or "restore" and call the appropriate function
 if __name__ == "__main__":
     if len(sys.argv) > 1:
         if sys.argv[1] == "save":
             save()
         elif sys.argv[1] == "load":
             load()
+        elif sys.argv[1] == "restore":
+            restore_backup()
         else:
-            print("Invalid parameter. Please use 'save' or 'load'")
+            print("Invalid parameter. Please use 'save', 'load' or 'restore'")
     else:
-        print("No parameter received. Please use 'save' or 'load'")
+        print("No parameter received. Please use 'save', 'load' or 'restore'")
