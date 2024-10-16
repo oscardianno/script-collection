@@ -1,1 +1,4 @@
 spotify_analysis/
+node_modules/
+cinepolis-watcher/login.json
+cinepolis-watcher/game_count.json
