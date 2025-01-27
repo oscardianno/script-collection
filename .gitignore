@@ -2,3 +2,4 @@ spotify_analysis/
 node_modules/
 cinepolis-watcher/login.json
 cinepolis-watcher/game_count.json
+stories-views/stories_data.json
