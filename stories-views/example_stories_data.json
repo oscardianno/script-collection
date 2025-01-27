@@ -1,0 +1,35 @@
+{
+  "stories": [
+    [
+      {
+        "user": {
+          "pk": "1234567890",
+          "pk_id": "1234567890",
+          "username": "pepe",
+          "full_name": "Pepe",
+          "is_private": true,
+          "strong_id__": "1234567890",
+          "id": "1234567890",
+          "is_verified": false,
+          "profile_pic_id": "xxx",
+          "profile_pic_url": "xxx",
+          "friendship_status": {
+            "followed_by": true,
+            "following": true,
+            "incoming_request": false,
+            "is_bestie": false,
+            "is_feed_favorite": false,
+            "is_private": true,
+            "is_restricted": false,
+            "outgoing_request": false
+          },
+          "latest_reel_media": 1234567890,
+          "latest_besties_reel_media": 0,
+          "latest_fanclub_reel_media": 0
+        },
+        "has_liked": false,
+        "is_spam_viewer": false
+      }
+    ]
+  ]
+}
